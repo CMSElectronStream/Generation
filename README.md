@@ -21,9 +21,9 @@ scramv1 b -j 8
     --no_exec
 
 
+cp Generation/WToENu_TuneZ2star_13TeV_pythia8_cff.py Configuration/Generator/python/
 
-
-    cmsDriver.py WE_14TeV_cfi.py \
+    cmsDriver.py Configuration/Generator/python/WToENu_TuneZ2star_13TeV_pythia8_cff.py \
     --step GEN,SIM --beamspot Realistic8TeVCollision \
     --conditions START62_V1::All \
     --pileup NoPileUp \
@@ -35,9 +35,19 @@ scramv1 b -j 8
 
 
 
+
+
 To be fixed:
 
     Realistic13TeVCommision
 
 
-cmsRun WToENu_TuneZ2star_13TeV_pythia6_cff_py_GEN_SIM.py
+and run
+
+    cmsRun WToENu_TuneZ2star_13TeV_pythia6_cff_py_GEN_SIM.py
+    cmsRun WToENu_TuneZ2star_13TeV_pythia8_cff_py_GEN_SIM.py
+
+and test:
+
+    cmsRun  ~/public/CMSSW/DrawTree.py inputFiles=file:WToENu_TuneZ2star_13TeV_pythia8_cff_py_GEN_SIM.root
+    cmsRun  ~/public/CMSSW/DrawTree.py inputFiles=file:WToENu_TuneZ2star_13TeV_pythia6_cff_py_GEN_SIM.root
