@@ -5,10 +5,19 @@ Generation of signal
 
 W>enu
 
-git-cms-addpkg Configuration/Generator
+Working here:
 
-cp Generation/WToENu_TuneZ2star_13TeV_pythia6_cff.py Configuration/Generator/python/
-scramv1 b -j 8
+    /home/amassiro/ECAL/HLT/CMSSW_6_2_3/src/Generation
+
+Prepare:
+
+    git-cms-addpkg Configuration/Generator
+
+run:
+
+    cp Generation/WToENu_TuneZ2star_13TeV_pythia6_cff.py Configuration/Generator/python/
+    scramv1 b -j 8
+
 
     cmsDriver.py Configuration/Generator/python/WToENu_TuneZ2star_13TeV_pythia6_cff.py \
     --step GEN,SIM --beamspot Realistic8TeVCollision \
@@ -21,7 +30,8 @@ scramv1 b -j 8
     --no_exec
 
 
-cp Generation/WToENu_TuneZ2star_13TeV_pythia8_cff.py Configuration/Generator/python/
+    cp Generation/WToENu_TuneZ2star_13TeV_pythia8_cff.py Configuration/Generator/python/
+    scramv1 b -j 8
 
     cmsDriver.py Configuration/Generator/python/WToENu_TuneZ2star_13TeV_pythia8_cff.py \
     --step GEN,SIM --beamspot Realistic8TeVCollision \
