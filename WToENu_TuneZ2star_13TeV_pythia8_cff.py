@@ -4,7 +4,7 @@ from Configuration.Generator.PythiaUEZ2starSettings_cfi import *
 
 
 generator = cms.EDFilter("Pythia8GeneratorFilter",
-    crossSection = cms.untracked.double(71.39e+09),
+    crossSection = cms.untracked.double(19551.),
     maxEventsToPrint = cms.untracked.int32(0),
     pythiaPylistVerbosity = cms.untracked.int32(1),
     filterEfficiency = cms.untracked.double(1.0),
@@ -16,7 +16,7 @@ generator = cms.EDFilter("Pythia8GeneratorFilter",
            'ParticleDecays:limitTau0 = on',
            'ParticleDecays:tauMax = 10',
            'Tune:ee 3',
-           'Tune:pp 2',
+           'Tune:pp 5',
 
            'WeakSingleBoson:ffbar2W = on',
            '24:onMode = off',
